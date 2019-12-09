@@ -5,9 +5,11 @@
 **Bookmark**
 **Youtube**
 **Codewars**
-*The problem is the  education system is not on par
-*The purpose of the app is to promote self studying, easy accessibility, offline, and free.
-*The solution of the app is to enhance technological skills to school kids that are from under privileged communities:
+
+#### The problem is the  education system is not on par
+#### The purpose of the app is to promote self studying, easy accessibility, offline, and free.
+#### The solution of the app is to enhance technological skills to school kids that are from under privileged communities:
+
 * login with a unique identity 
 * choose level page 
 * choose the topic you want to learn
