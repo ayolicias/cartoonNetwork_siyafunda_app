@@ -16,7 +16,16 @@ public class SiyafundaApp {
 
         get("/", (req, res)-> {
             Map dataMap = new HashMap<>();
-            return new HandlebarsTemplateEngine().modelAndView(dataMap, "home.hbs");
+            return new HandlebarsTemplateEngine().modelAndView(dataMap, "index.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/", (req, res)-> {
+            Map dataMap = new HashMap<>();
+            return new HandlebarsTemplateEngine().modelAndView(dataMap, "About.hbs");
         }, new HandlebarsTemplateEngine());
     }
-}
+    }
+
+
+
+
