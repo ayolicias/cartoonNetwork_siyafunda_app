@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SiyafundaApp",
+            "request": "launch",
+            "mainClass": "siyafunda.SiyafundaApp",
+            "projectName": "cartoonNetwork_siyafunda_app"
+        }
+    ]
+}
