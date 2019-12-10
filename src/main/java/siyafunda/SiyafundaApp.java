@@ -3,6 +3,8 @@ package siyafunda;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,9 +16,15 @@ public class SiyafundaApp {
         staticFiles.location("/public");
         port(8000);
 
-        get("/", (req, res)-> {
-            Map dataMap = new HashMap<>();
-            return new HandlebarsTemplateEngine().modelAndView(dataMap, "home.hbs");
-        }, new HandlebarsTemplateEngine());
+        try {
+            Connection connection =  DriverManager.getConnection("jdbc:postgresql://localhost/funda");
+
+            get("/", (req, res) -> {
+                Map dataMap = new HashMap<>();
+                return new HandlebarsTemplateEngine().modelAndView(dataMap, "home.hbs");
+            }, new HandlebarsTemplateEngine());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
