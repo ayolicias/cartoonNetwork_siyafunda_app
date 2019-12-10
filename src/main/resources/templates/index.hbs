@@ -1,10 +1,18 @@
 {{#partial "body"}}
     <div>
-<!--        <h1>Siyafunda App</h1>-->
+        <label for="name"><h1>Enter Your Name:</h1></label><br></br>
+        <input type="text" class="form-control" id="name" placeholder="Enter Your Name Here..."> <br></br>
+
+
+        <h1>Choose Your Level:</h1> <br></br>
+        <div>
+            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Junior"> <br>
+            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Intermediate"> <br>
+            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Senior"> <br>
+
+        </div>
     </div>
 
-
-
-
 {{/partial}}
+
 {{> layout.hbs}}
