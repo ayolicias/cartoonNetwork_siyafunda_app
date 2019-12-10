@@ -17,7 +17,7 @@ public class SiyafundaApp {
         port(8000);
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/funda");
+            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/funda", "coder", "coder123");
             get("/", (req, res) -> {
                 Map dataMap = new HashMap<>();
                 return new HandlebarsTemplateEngine().modelAndView(dataMap, "index.hbs");
