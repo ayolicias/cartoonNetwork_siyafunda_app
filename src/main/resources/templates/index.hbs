@@ -1,17 +1,22 @@
 {{#partial "body"}}
+
+    <form action="/choose" method="post" >
+
+
     <div>
         <label for="name"><h1>Enter Your Name:</h1></label><br></br>
-        <input type="text" class="form-control" id="name" placeholder="Enter Your Name Here..."> <br></br>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name Here..." required> <br></br>
 
 
         <h1>Choose Your Level:</h1> <br></br>
         <div>
-            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Junior"> <br>
-            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Intermediate"> <br>
-            <input type="button" class="btn btn-outline-dark btn-lg btn-block" value="Senior"> <br>
+            <input type="submit" id="junior" name="level" class="btn btn-outline-dark btn-lg btn-block" value="Junior"> <br>
+            <input type="submit" id="intermediate" name="level" class="btn btn-outline-dark btn-lg btn-block" value="Intermediate"> <br>
+            <input type="submit" id="senior" name="level" class="btn btn-outline-dark btn-lg btn-block" value="Senior"> <br>
 
         </div>
     </div>
+    </form>
 
 {{/partial}}
 
