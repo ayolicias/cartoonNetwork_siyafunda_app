@@ -45,7 +45,7 @@ public class SiyafundaApp {
 
         }
 
-        return DriverManager.getConnection(defualtJdbcUrl,"coder", "coder123");
+        return DriverManager.getConnection(defualtJdbcUrl,"coder", "Codex2019");
 
     }
 
@@ -65,6 +65,20 @@ public class SiyafundaApp {
             get("/about", (req, res) -> {
                 Map dataMap = new HashMap<>();
                 return new HandlebarsTemplateEngine().modelAndView(dataMap, "About.hbs");
+            }, new HandlebarsTemplateEngine());
+
+            post("/level", (req, res) -> {
+                Map dataMap = new HashMap<>();
+
+                String level = req.queryParams("level");
+
+                if (level.equalsIgnoreCase("senior")){
+                    return new HandlebarsTemplateEngine().modelAndView(dataMap, "senior.hbs");
+                } else if (level.equalsIgnoreCase("intermediate")){
+                    return new HandlebarsTemplateEngine().modelAndView(dataMap, "intermediate.hbs");
+                }
+
+                return new HandlebarsTemplateEngine().modelAndView(dataMap, "junior.hbs");
             }, new HandlebarsTemplateEngine());
 
         } catch (Exception e) {
