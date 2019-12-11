@@ -67,6 +67,11 @@ public class SiyafundaApp {
                 return new HandlebarsTemplateEngine().modelAndView(dataMap, "About.hbs");
             }, new HandlebarsTemplateEngine());
 
+            get("/team", (req, res) -> {
+                Map dataMap = new HashMap<>();
+                return new HandlebarsTemplateEngine().modelAndView(dataMap, "team.hbs");
+            }, new HandlebarsTemplateEngine());
+
             post("/level", (req, res) -> {
                 Map dataMap = new HashMap<>();
 
