@@ -53,13 +53,25 @@
     </div>
 </nav>
 <br>
-< class="container">
+<div class="container">
 
     {{#block "body"}}
 
     {{/block}}
 
+<br></br>
 
+    <form action="http://www.youtube.com/results" method="get" target="_blank" >
+        <div class="row">
+
+        <div class="col">
+        <input name="search_query" class="form-control" type="text" maxlength="128" />
+        </div>
+            <div class="col">
+            <input type="submit" class="btn btn-outline-dark" value="Search" />
+            </div>
+        </div>
+    </form>
 
 </div>
 
