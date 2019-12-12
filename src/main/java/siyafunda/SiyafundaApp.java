@@ -45,7 +45,7 @@ public class SiyafundaApp {
 
         }
 
-        return DriverManager.getConnection(defualtJdbcUrl,"coder", "coder123");
+        return DriverManager.getConnection(defualtJdbcUrl,"coder", "Codex2019");
 
     }
 
