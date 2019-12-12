@@ -45,7 +45,7 @@ public class SiyafundaApp {
 
         }
 
-        return DriverManager.getConnection(defualtJdbcUrl,"coder", "Codex2019");
+        return DriverManager.getConnection(defualtJdbcUrl,"coder", "coder123");
 
     }
 
@@ -57,6 +57,9 @@ public class SiyafundaApp {
 
         try {
             Connection connection = getDatabaseConnection("jdbc:postgresql://localhost/funda");
+
+            PostgresDB postDB = new PostgresDB(connection);
+
             get("/", (req, res) -> {
                 Map dataMap = new HashMap<>();
                 return new HandlebarsTemplateEngine().modelAndView(dataMap, "index.hbs");
