@@ -1,22 +1,22 @@
 {{#partial "body"}}
     <div>
         <h1>Contact Us</h1>
-        <form>
+        <form action="mailto:ngwenyasiyamukela@gmail.com" enctype="text/plain" data-toggle="validator">
             <div class="form-group">
                 <p style="font-style:italic">
                     We're always looking forward to hearing from you, if you have any queries simply
-                    contact us via one of the following handlers
+                    contact us via our handlers
                 </p>
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="exampleInputEmail1" required="true">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text" style="color:black">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Full Name</label>
+                <label for="exampleInputPassword1" required="true">Full Name</label>
                 <input type="name" class="form-control" id="exampleInputname1" placeholder="Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1"> Message</label>
+                <label for="exampleFormControlTextarea1" required="true"> Message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
